@@ -1,0 +1,277 @@
+{
+  "generated_at": "2026-10-07 22:53",
+  "source": "real",
+  "file": "data\\real\\kpx_daily_2025.csv",
+  "is_simulated": false,
+  "unit": "MWh",
+  "period": {
+    "start": "2025-01-01",
+    "end": "2025-12-31"
+  },
+  "count": 365,
+  "metrics": {
+    "total": 565048560.0,
+    "average": 1548078.2,
+    "max": 1938321.0,
+    "min": 1102877.0,
+    "std": 187853.9
+  },
+  "recent_7_days": {
+    "total": 11239763.0,
+    "average": 1605680.4
+  },
+  "trend": "stable",
+  "trend_detail": {
+    "trend": "stable",
+    "recent_avg": 1605680.4,
+    "previous_avg": 1623883.1,
+    "change_pct": -1.1,
+    "window_days": 7
+  },
+  "preprocessing": {
+    "missing_before": 0,
+    "interpolated": 0,
+    "missing_after": 0,
+    "rule": "연속 3일 이하 결측은 선형 보간, 초과 구간은 결측 유지"
+  },
+  "semester_vs_vacation": {
+    "semester_mean": 1473602.6,
+    "vacation_mean": 1698260.6,
+    "ratio_pct": -13.2
+  },
+  "day_type": {
+    "weekday_mean": 1623946.5,
+    "weekend_mean": 1403968.9,
+    "holiday_mean": 1332047.1,
+    "weekend_vs_weekday_pct": 86.5,
+    "holiday_vs_weekday_pct": 82.0
+  },
+  "monthly": [
+    {
+      "month": "2025-01",
+      "mean": 1624711.6,
+      "sum": 50366060.0,
+      "max": 1913367.0,
+      "min": 1300744.0,
+      "days": 31
+    },
+    {
+      "month": "2025-02",
+      "mean": 1658884.1,
+      "sum": 46448756.0,
+      "max": 1906846.0,
+      "min": 1383613.0,
+      "days": 28
+    },
+    {
+      "month": "2025-03",
+      "mean": 1474274.5,
+      "sum": 45702510.0,
+      "max": 1722281.0,
+      "min": 1218499.0,
+      "days": 31
+    },
+    {
+      "month": "2025-04",
+      "mean": 1372462.5,
+      "sum": 41173874.0,
+      "max": 1520036.0,
+      "min": 1162576.0,
+      "days": 30
+    },
+    {
+      "month": "2025-05",
+      "mean": 1371049.8,
+      "sum": 42502543.0,
+      "max": 1575968.0,
+      "min": 1102877.0,
+      "days": 31
+    },
+    {
+      "month": "2025-06",
+      "mean": 1489735.6,
+      "sum": 44692069.0,
+      "max": 1720754.0,
+      "min": 1194511.0,
+      "days": 30
+    },
+    {
+      "month": "2025-07",
+      "mean": 1746071.2,
+      "sum": 54128207.0,
+      "max": 1932050.0,
+      "min": 1468337.0,
+      "days": 31
+    },
+    {
+      "month": "2025-08",
+      "mean": 1759564.9,
+      "sum": 54546513.0,
+      "max": 1938321.0,
+      "min": 1439367.0,
+      "days": 31
+    },
+    {
+      "month": "2025-09",
+      "mean": 1620922.7,
+      "sum": 48627681.0,
+      "max": 1827440.0,
+      "min": 1284367.0,
+      "days": 30
+    },
+    {
+      "month": "2025-10",
+      "mean": 1395073.9,
+      "sum": 43247290.0,
+      "max": 1554110.0,
+      "min": 1151387.0,
+      "days": 31
+    },
+    {
+      "month": "2025-11",
+      "mean": 1448193.6,
+      "sum": 43445809.0,
+      "max": 1637031.0,
+      "min": 1224251.0,
+      "days": 30
+    },
+    {
+      "month": "2025-12",
+      "mean": 1618298.3,
+      "sum": 50167248.0,
+      "max": 1758733.0,
+      "min": 1361744.0,
+      "days": 31
+    }
+  ],
+  "weekday": [
+    {
+      "weekday": 0,
+      "weekday_ko": "월",
+      "mean": 1572180.7,
+      "std": 173776.9,
+      "days": 52,
+      "vs_weekday_pct": -2.1
+    },
+    {
+      "weekday": 1,
+      "weekday_ko": "화",
+      "mean": 1622803.0,
+      "std": 179023.1,
+      "days": 52,
+      "vs_weekday_pct": 1.0
+    },
+    {
+      "weekday": 2,
+      "weekday_ko": "수",
+      "mean": 1615472.6,
+      "std": 175520.0,
+      "days": 53,
+      "vs_weekday_pct": 0.6
+    },
+    {
+      "weekday": 3,
+      "weekday_ko": "목",
+      "mean": 1618121.4,
+      "std": 165453.5,
+      "days": 52,
+      "vs_weekday_pct": 0.8
+    },
+    {
+      "weekday": 4,
+      "weekday_ko": "금",
+      "mean": 1601751.8,
+      "std": 164400.7,
+      "days": 52,
+      "vs_weekday_pct": -0.3
+    },
+    {
+      "weekday": 5,
+      "weekday_ko": "토",
+      "mean": 1448581.0,
+      "std": 134080.3,
+      "days": 52,
+      "vs_weekday_pct": -9.8
+    },
+    {
+      "weekday": 6,
+      "weekday_ko": "일",
+      "mean": 1356341.2,
+      "std": 138943.6,
+      "days": 52,
+      "vs_weekday_pct": -15.5
+    }
+  ],
+  "period_day_type": [
+    {
+      "period": "방학",
+      "day_type": "공휴일",
+      "mean": 1407443.8,
+      "days": 5
+    },
+    {
+      "period": "방학",
+      "day_type": "주말",
+      "mean": 1546832.1,
+      "days": 34
+    },
+    {
+      "period": "방학",
+      "day_type": "평일",
+      "mean": 1778780.8,
+      "days": 82
+    },
+    {
+      "period": "학기",
+      "day_type": "공휴일",
+      "mean": 1303048.4,
+      "days": 13
+    },
+    {
+      "period": "학기",
+      "day_type": "주말",
+      "mean": 1332537.3,
+      "days": 68
+    },
+    {
+      "period": "학기",
+      "day_type": "평일",
+      "mean": 1546054.3,
+      "days": 163
+    }
+  ],
+  "outliers": {
+    "count": 0,
+    "rule": "학기/방학·날 유형·요일별 기준값 대비 ±30%",
+    "days": []
+  },
+  "volatility": {
+    "std30_mean": 133658.4,
+    "std30_max": 189349.7,
+    "std30_max_date": "2025-02-07"
+  },
+  "max_change": {
+    "date": "2025-04-14",
+    "pct_change_1d": 23.6
+  },
+  "temperature": null,
+  "top_memo": "대체공휴일",
+  "forecast": {
+    "method": "같은 요일 직전 4주 평균",
+    "holdout_days": 60,
+    "mae": 71990.9,
+    "mape_pct": 4.6,
+    "naive7_mae": 48612.3,
+    "naive7_mape_pct": 3.1,
+    "assumptions": [
+      "요일 패턴이 4주 안에서는 유지된다",
+      "학기·방학 전환, 공휴일, 정전 같은 사건은 예측에 반영되지 않는다",
+      "추세(연 +3%)는 4주 평균에 자연히 일부 반영되지만 명시적으로 모델링하지 않았다"
+    ],
+    "limits": [
+      "공휴일·이상치 날의 오차가 크다 (같은 요일 평균이 그 날을 설명하지 못함)",
+      "학기 시작·종료 직후 1~2주는 과거 4주가 다른 구간이라 체계적으로 틀린다",
+      "단일 수치 예측이며 구간(불확실성)을 제시하지 않는다"
+    ]
+  }
+}

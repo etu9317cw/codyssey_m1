@@ -41,7 +41,7 @@ def build_summary(df: pd.DataFrame, info: dict, clean_log: dict, monthly: pd.Dat
         "source": source,
         "file": str(file.relative_to(ROOT)) if file.is_relative_to(ROOT) else str(file),
         "is_simulated": source == "sample",
-        "unit": "kWh",
+        "unit": plots.UNIT,
         "period": {"start": info["start"], "end": info["end"]},
         "count": int(values.count()),
         "metrics": {"total": round(float(values.sum()), 1), "average": round(float(values.mean()), 1),
@@ -112,6 +112,8 @@ def main() -> int:
     parser.add_argument("--temp-col")
     parser.add_argument("--holdout", type=int, default=60)
     parser.add_argument("--no-forecast", action="store_true")
+    parser.add_argument("--tag", help="출력 하위 폴더 이름 (예: real → images/real, output/real). 없으면 루트에 저장")
+    parser.add_argument("--unit", default="kWh", help="값 단위 표기 (sample=kWh, KPX 실데이터=MWh)")
     args = parser.parse_args()
 
     file = Path(args.file) if args.file else DEFAULT_FILES.get(args.source)
@@ -119,9 +121,10 @@ def main() -> int:
         print(f"데이터 파일이 없습니다: {file}. real이면 --file 로 지정하세요.")
         return 2
 
-    images = ROOT / "images"
-    output = ROOT / "output"
-    output.mkdir(exist_ok=True)
+    images = ROOT / "images" / args.tag if args.tag else ROOT / "images"
+    output = ROOT / "output" / args.tag if args.tag else ROOT / "output"
+    output.mkdir(parents=True, exist_ok=True)
+    plots.UNIT = args.unit
 
     print(f"① 로딩 {file}")
     df = load.load_series(file, args.date_col, args.value_col, args.temp_col)
@@ -147,7 +150,7 @@ def main() -> int:
         fc = result["metrics"]
 
     print("⑤ 시각화")
-    suffix = " (시뮬레이션 데이터)" if args.source == "sample" else ""
+    suffix = " (시뮬레이션 데이터)" if args.source == "sample" else " (실데이터)"
     saved = [plots.plot_trend_ma(df, images, suffix), plots.plot_monthly(monthly, images),
              plots.plot_weekday(weekday, images), plots.plot_outliers(df, images)]
     if fc:
