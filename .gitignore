@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 비밀·로컬
+.env
+
+# 작업 메모(제출 제외)
+_작업파일/
+TASK.md
+output/analyzed.csv
