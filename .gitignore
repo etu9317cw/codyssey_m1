@@ -11,3 +11,4 @@ __pycache__/
 _작업파일/
 TASK.md
 output/analyzed.csv
+output/*/analyzed.csv
