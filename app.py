@@ -80,14 +80,14 @@ with tab2:
         st.subheader("월별 일평균")
         monthly = analyze.monthly_summary(df)
         st.bar_chart(monthly["mean"], height=320)
-        st.dataframe(monthly, use_container_width=True, height=240)
+        st.dataframe(monthly, width="stretch", height=240)
     with right:
         st.subheader("요일별 평균")
         weekday = analyze.weekday_summary(df).set_index("weekday_ko")
         st.bar_chart(weekday["mean"], height=320)
-        st.dataframe(weekday[["mean", "std", "days", "vs_weekday_pct"]], use_container_width=True, height=240)
+        st.dataframe(weekday[["mean", "std", "days", "vs_weekday_pct"]], width="stretch", height=240)
     st.subheader("구간 × 날 유형 평균")
-    st.dataframe(analyze.period_summary(df), use_container_width=True)
+    st.dataframe(analyze.period_summary(df), width="stretch")
 
 with tab3:
     st.subheader("30일 이동 표준편차 (변동성)")
@@ -99,7 +99,9 @@ with tab3:
             cols.append("memo")
         out = df[df["outlier"]][cols].rename(columns={
             "date": "날짜", "value": "사용량", "weekday_mean": "기준값", "dev_from_weekday_mean": "편차(%)", "outlier_direction": "방향", "memo": "메모"})
-        st.dataframe(out.round(1), use_container_width=True)
+        num_cols = out.select_dtypes("number").columns
+        out[num_cols] = out[num_cols].round(1)
+        st.dataframe(out, width="stretch")
 
 with st.expander("이 대시보드가 쓰는 규칙"):
     st.markdown(
