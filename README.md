@@ -11,7 +11,7 @@
 | 데이터 | `data/sample/` 시뮬레이션 730일, `data/real/` 전력거래소 실데이터 365일 — 설명은 [`data/README.md`](./data/README.md) |
 | 결과 수치 | `output/summary.json`(M-2 비서가 읽는 형식), `output/summary.txt`(리포트 인용용) |
 | 테스트 | `tests/test_analyze.py` (pytest 9개) |
-| GitHub | `https://github.com/etu9317cw/codyssey_m1` (push 후 공개) |
+| GitHub | `https://github.com/etu9317cw/codyssey_m1` |
 
 > 기본 데이터는 **시뮬레이션**입니다(센터 건물 계량값은 외부에서 받을 수 없음). 생성 규칙과 시드를 공개했고, 같은 코드가 실데이터(전국 전력수요)에서도 동작함을 리포트 7-3에서 확인했습니다.
 
